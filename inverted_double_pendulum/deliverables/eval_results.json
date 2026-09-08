@@ -1,0 +1,14 @@
+{
+  "env_name": "inverted_double_pendulum",
+  "gymnasium_env_id": "InvertedDoublePendulum-v5",
+  "engine": "brax-mjx",
+  "n_episodes": 128,
+  "mean_return": 9311.283203125,
+  "survival": 0.9948202967643738,
+  "mean_speed": 0.0,
+  "mean_goal_dist": null,
+  "mean_final_z": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": 9311.283203125
+}

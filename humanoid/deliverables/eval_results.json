@@ -1,0 +1,14 @@
+{
+  "env_name": "humanoid",
+  "gymnasium_env_id": "Humanoid-v5",
+  "engine": "brax-mjx",
+  "n_episodes": 128,
+  "mean_return": 10672.830078125,
+  "survival": 0.9957422018051147,
+  "mean_speed": 4.675801500678062,
+  "mean_goal_dist": null,
+  "mean_final_z": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": 10672.830078125
+}

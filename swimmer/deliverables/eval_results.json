@@ -1,0 +1,14 @@
+{
+  "env_id": "Swimmer-v5",
+  "engine": "gymnasium-sb3",
+  "n_episodes": 10,
+  "mean_return": 358.80549769665157,
+  "survival": 1.0,
+  "mean_speed": 0.3589984202924433,
+  "mean_goal_dist": null,
+  "mean_final_z_dist": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": 358.80549769665157,
+  "render_mp4": null
+}

@@ -1,0 +1,29 @@
+engine: brax-mjx
+gymnasium_env_id: HumanoidStandup-v5
+env_name: humanoidstandup
+backend: mjx
+episode_length: 1000
+action_repeat: 1
+seed: 0
+num_envs: 2048
+num_eval_envs: 128
+total_timesteps: 40000000
+num_evals: 9
+deterministic_eval: true
+normalize_observations: true
+output_dir: deliverables
+ppo:
+  policy_hidden_layer_sizes:
+  - 256
+  - 256
+  value_hidden_layer_sizes:
+  - 256
+  - 256
+  - 256
+success:
+  min_return: 60000.0
+  min_final_z: 1.0
+render:
+  fps: 30
+  width: 480
+  height: 480

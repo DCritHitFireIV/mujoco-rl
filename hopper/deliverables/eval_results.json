@@ -1,0 +1,14 @@
+{
+  "env_id": "Hopper-v5",
+  "engine": "gymnasium-sb3",
+  "n_episodes": 10,
+  "mean_return": 3624.9415194272997,
+  "survival": 0.9951000000000001,
+  "mean_speed": 2.644355786071189,
+  "mean_goal_dist": null,
+  "mean_final_z_dist": -0.17059521053558996,
+  "success": true,
+  "success_reason": "ok",
+  "score": 3624.9415194272997,
+  "render_mp4": null
+}

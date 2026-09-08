@@ -1,0 +1,26 @@
+import argparse, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import common
+p = argparse.ArgumentParser()
+p.add_argument('--config', required=True)
+p.add_argument('--model', required=True)
+p.add_argument('--vecnorm', required=True)
+p.add_argument('--output', default=None)
+p.add_argument('--n-episodes', type=int, default=None)
+p.add_argument('--no-render', action='store_true')
+args = p.parse_args()
+common.set_render_backend()
+cfg = common.load_config(args.config)
+out = cfg.get('output_dir', os.path.dirname(args.config))
+n_episodes = args.n_episodes or int(cfg.get('train', {}).get('n_eval_episodes', 10))
+from stable_baselines3 import PPO
+model = PPO.load(args.model, device=cfg.get('device', 'auto'))
+result = common.evaluate(cfg, model, args.vecnorm, n_episodes=n_episodes)
+common.write_json(result, os.path.join(out, 'eval_results.json'))
+common.write_episodes_csv(result, os.path.join(out, 'eval_metrics.csv'))
+print(f"success={result['success']} ({result['success_reason']})")
+print(f"mean_return={result['mean_return']:.2f} survival={result['survival']:.4f} mean_speed={result['mean_speed']} mean_goal_dist={result['mean_goal_dist']} mean_final_z_dist={result['mean_final_z_dist']}")
+if not args.no_render:
+    mp4 = args.output or os.path.join(out, 'best_rollout.mp4')
+    common.render_rollout(cfg, model, args.vecnorm, mp4)
+    print(f'mp4: {mp4} ({os.path.getsize(mp4)} bytes)')

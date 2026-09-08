@@ -1,0 +1,30 @@
+engine: brax-mjx
+gymnasium_env_id: Humanoid-v5
+env_name: humanoid
+backend: mjx
+episode_length: 1000
+action_repeat: 1
+seed: 0
+num_envs: 2048
+num_eval_envs: 128
+total_timesteps: 100000000
+num_evals: 21
+deterministic_eval: true
+normalize_observations: true
+output_dir: deliverables
+ppo:
+  policy_hidden_layer_sizes:
+  - 256
+  - 256
+  value_hidden_layer_sizes:
+  - 256
+  - 256
+  - 256
+success:
+  min_return: 6000.0
+  min_survival: 0.95
+  min_speed: 1.5
+render:
+  fps: 30
+  width: 480
+  height: 480

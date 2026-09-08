@@ -1,0 +1,14 @@
+{
+  "env_name": "ant",
+  "gymnasium_env_id": "Ant-v5",
+  "engine": "brax-mjx",
+  "n_episodes": 128,
+  "mean_return": 4336.9951171875,
+  "survival": 0.879132866859436,
+  "mean_speed": 4.18034910375718,
+  "mean_goal_dist": null,
+  "mean_final_z": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": 4336.9951171875
+}

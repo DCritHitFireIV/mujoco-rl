@@ -1,0 +1,14 @@
+{
+  "env_id": "HalfCheetah-v5",
+  "engine": "gymnasium-sb3",
+  "n_episodes": 10,
+  "mean_return": 5811.7924618177585,
+  "survival": 1.0,
+  "mean_speed": 6.133249033993623,
+  "mean_goal_dist": null,
+  "mean_final_z_dist": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": 5811.7924618177585,
+  "render_mp4": null
+}
