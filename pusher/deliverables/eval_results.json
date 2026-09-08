@@ -1,0 +1,14 @@
+{
+  "env_name": "pusher",
+  "gymnasium_env_id": "Pusher-v5",
+  "engine": "brax-mjx",
+  "n_episodes": 128,
+  "mean_return": -19.486003875732422,
+  "survival": 1.0,
+  "mean_speed": 0.0,
+  "mean_goal_dist": 0.05088329262798652,
+  "mean_final_z": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": -0.05088329262798652
+}

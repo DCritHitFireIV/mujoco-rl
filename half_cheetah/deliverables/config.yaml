@@ -1,0 +1,45 @@
+engine: gymnasium-sb3
+env_id: HalfCheetah-v5
+seed: 0
+eval_seed: 1000
+device: cpu
+n_envs: 12
+start_method: fork
+max_episode_steps: 1000
+output_dir: deliverables
+ppo:
+  policy: MlpPolicy
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  learning_rate: 0.0003
+  lr_schedule: linear
+  policy_kwargs:
+    net_arch:
+    - 64
+    - 64
+    activation_fn: tanh
+vecnormalize:
+  norm_obs: true
+  norm_reward: true
+  gamma: 0.99
+  clip_obs: 10.0
+train:
+  total_timesteps: 5000000
+  chunk: 2048
+  eval_every: 128000
+  n_eval_episodes: 10
+  patience: 3
+  tensorboard: true
+success:
+  min_return: 4800.0
+render:
+  fps: 30
+  width: 640
+  height: 480

@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+my_rollout.mp4

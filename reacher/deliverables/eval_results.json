@@ -1,0 +1,14 @@
+{
+  "env_name": "reacher",
+  "gymnasium_env_id": "Reacher-v5",
+  "engine": "brax-mjx",
+  "n_episodes": 128,
+  "mean_return": -3.7328062057495117,
+  "survival": 1.0,
+  "mean_speed": 0.0,
+  "mean_goal_dist": 0.00909522061010648,
+  "mean_final_z": null,
+  "success": true,
+  "success_reason": "ok",
+  "score": -0.00909522061010648
+}

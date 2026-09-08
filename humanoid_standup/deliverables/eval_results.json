@@ -1,0 +1,14 @@
+{
+  "env_name": "humanoidstandup",
+  "gymnasium_env_id": "HumanoidStandup-v5",
+  "engine": "brax-mjx",
+  "n_episodes": 128,
+  "mean_return": 76539.5,
+  "survival": 1.0,
+  "mean_speed": 0.0,
+  "mean_goal_dist": null,
+  "mean_final_z": 1.1684126971522346,
+  "success": true,
+  "success_reason": "ok",
+  "score": 76539.5
+}
